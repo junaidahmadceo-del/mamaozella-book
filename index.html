@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>El Recetario de la Puerta de Atrás</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="El libro de cocina de Mama Ozella: 220 entradas de la cocina del Delta de Misisipi, cada una con qué hacer, por qué funciona y cómo saber que quedó bien. PDF en español, letra grande.">
+<meta property="og:type" content="product">
+<meta property="og:locale" content="es_US">
+<meta property="og:title" content="El Recetario de la Puerta de Atrás · Mama Ozella">
+<meta property="og:description" content="Su comida salió en el menú. Su nombre, nunca. 220 entradas con su porqué y 14 fotos de cómo se ve “listo”.">
+<meta property="og:image" content="images/og-imagen.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="El Recetario de la Puerta de Atrás · Mama Ozella">
+<meta name="twitter:description" content="220 entradas de la cocina del Delta, cada una con qué hacer, por qué funciona y cómo saber que quedó bien.">
+<meta name="twitter:image" content="images/og-imagen.jpg">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Nunito+Sans:opsz,wght@6..12,700;6..12,800&display=swap">
+<link rel="preload" as="image" href="images/portada.webp">
+<style>
+/* Layout: a recipe book laid open on a kitchen table — narrow reading column, warm paper, brick-red entry tags like the book's own "ENTRADA" labels. Single light look by choice: maximum contrast for readers 50+. */
+:root{
+  color-scheme: light;
+  --paper:#FBF7F0;      /* page */
+  --paper-2:#F3E9DA;    /* alternate band */
+  --card:#FFFDF9;       /* cards */
+  --ink:#1E1A17;        /* text */
+  --ink-2:#463A31;      /* secondary text, 9:1 on paper */
+  --brick:#8E2F2F;      /* buttons, accents */
+  --brick-dk:#742424;
+  --rule:#D9C8B0;
+  --night:#2B211C;      /* dark bands */
+  --mustard:#E0A526;    /* only on --night */
+  --on-night:#FBF3E6;
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --body:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --label:"Nunito Sans", "Segoe UI", Arial, sans-serif;
+  --gut-l:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.6;padding-bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+@media (min-width:768px){body{font-size:20px}}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--brick)}
+:focus-visible{outline:3px solid var(--brick);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:var(--gut-l);padding-right:var(--gut-r)}
+.narrow{max-width:760px}
+section{padding-block:72px}
+@media (max-width:640px){section{padding-block:56px}}
+.band{background:var(--paper-2)}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.12;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.4vw,46px)}
+h2 em,h1 em{font-style:italic;font-weight:500;color:var(--brick)}
+h3{font-size:24px;line-height:1.25}
+p{margin:0}
+.eyebrow{font-family:var(--label);font-weight:800;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:var(--brick);margin:0 0 14px}
+.intro{max-width:62ch;color:var(--ink-2);margin-top:18px}
+.tag{font-family:var(--label);font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--brick)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:60px;padding:14px 30px;border-radius:10px;background:var(--brick);color:#fff;font-family:var(--label);font-weight:800;font-size:20px;text-decoration:none;border:0;cursor:pointer;box-shadow:0 6px 16px rgba(142,47,47,.22);transition:background .15s}
+.btn:hover{background:var(--brick-dk)}
+.btn-sm{min-height:56px;padding:10px 20px;font-size:18px}
+.btn-gold{background:var(--mustard);color:var(--night);box-shadow:none}
+.btn-gold:hover{background:#ECB740}
+.btn-gold:focus-visible{outline-color:var(--mustard)}
+
+/* announcement */
+.announce{background:var(--brick);color:#fff;text-align:center;font-family:var(--label);font-weight:800;font-size:17px;padding:10px var(--gut-r) 10px var(--gut-l);letter-spacing:.02em}
+
+/* header */
+.site-head{background:var(--night);color:var(--on-night);border-bottom:3px solid var(--mustard)}
+.site-head .brand b{color:#fff}
+.site-head .brand span{color:var(--mustard)}
+.site-head .btn{background:var(--on-night);color:var(--night);box-shadow:none}
+.site-head .btn:hover{background:var(--mustard)}
+.site-head .btn:focus-visible{outline-color:var(--mustard)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{min-width:0}
+.brand b{display:block;font-family:var(--display);font-weight:600;font-size:22px;line-height:1.15}
+.brand span{display:block;font-family:var(--label);font-weight:700;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-top:3px}
+@media (max-width:560px){.site-head .btn{display:none}.brand b{font-size:20px}}
+
+/* hero */
+.hero{padding-block:48px 64px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero-text{min-width:0}
+.hero h1{font-size:clamp(38px,5.6vw,66px);margin-bottom:22px}
+.hero .story{font-style:italic;font-size:21px;color:var(--ink);margin-bottom:14px;max-width:34ch}
+.hero .promise{max-width:52ch;color:var(--ink-2)}
+.hero .promise b{color:var(--ink)}
+.price-row{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 16px;margin-top:26px}
+.price{font-family:var(--display);font-weight:600;font-size:60px;line-height:1;font-variant-numeric:tabular-nums}
+.was{font-family:var(--display);font-size:28px;color:var(--ink-2);text-decoration:line-through;text-decoration-thickness:2px}
+.price-note{font-family:var(--label);font-weight:800;font-size:16px;letter-spacing:.04em;color:var(--brick);text-transform:uppercase}
+.cta-block{margin-top:20px;display:grid;gap:12px;justify-items:start}
+.trust{font-family:var(--label);font-weight:700;font-size:16px;color:var(--ink-2)}
+.bonus-line{font-size:18px;color:var(--ink);border-left:3px solid var(--brick);padding-left:12px;margin-top:6px}
+.cover{justify-self:center;width:min(100%,400px)}
+.cover img{border-radius:6px;box-shadow:0 2px 4px rgba(30,26,23,.18),0 24px 48px rgba(30,26,23,.22);transform:rotate(1.2deg)}
+@media (max-width:860px){
+  .hero{padding-block:28px 48px}
+  .hero .wrap{grid-template-columns:1fr;gap:36px}
+  .hero .story{font-size:19px}
+  .price{font-size:52px}
+  .cover{width:min(78%,320px)}
+  .cta-block,.cta-block .btn{width:100%}
+  .hero-text{display:flex;flex-direction:column}
+  .hero .promise{order:5;margin-top:22px}
+  .hero .eyebrow{letter-spacing:.08em}
+}
+@media (max-width:560px){.brand span{display:none}}
+
+/* numbers */
+.numbers{padding-block:0}
+.numbers ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.numbers li{padding:26px 12px;text-align:center;border-right:1px solid var(--rule)}
+.numbers li:last-child{border-right:0}
+.numbers strong{display:block;font-family:var(--display);font-weight:600;font-size:48px;line-height:1;font-variant-numeric:tabular-nums}
+.numbers span{display:block;margin-top:8px;font-family:var(--label);font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+@media (max-width:700px){.numbers ul{grid-template-columns:1fr 1fr}.numbers li:nth-child(2){border-right:0}.numbers li:nth-child(-n+2){border-bottom:1px solid var(--rule)}}
+
+/* steps */
+.steps{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+.steps li{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:26px;counter-increment:s;min-width:0}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--brick);color:#fff;font-family:var(--display);font-weight:600;font-size:24px;margin-bottom:16px}
+.steps h3{margin-bottom:8px}
+.steps p{color:var(--ink-2)}
+@media (max-width:860px){.steps{grid-template-columns:1fr}}
+
+/* dishes — two slow rows, CSS-only, pauses off screen and on hover */
+.mq-wrap{margin-top:36px;display:grid;gap:22px}
+.marquee{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.mq-track{list-style:none;margin:0;padding:0;display:flex;flex:0 0 auto;animation:mq 70s linear infinite;will-change:transform}
+.mq-track.rev{animation-direction:reverse}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+.marquee:hover .mq-track,.marquee:focus-within .mq-track,.mq-wrap.off .mq-track{animation-play-state:paused}
+.mq-item{flex:0 0 250px;margin-right:20px;min-width:0}
+.mq-item button{all:unset;cursor:zoom-in;display:block;width:100%;border-radius:12px}
+.mq-item button:focus-visible{outline:3px solid var(--brick);outline-offset:3px}
+.mq-item img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:var(--rule);box-shadow:0 6px 16px rgba(30,26,23,.14)}
+.mq-item h3{font-size:20px;margin-top:10px;text-align:center}
+.mq-item .pg{font-family:var(--label);font-weight:800;font-size:15px;color:var(--brick);letter-spacing:.04em;margin-top:2px;text-align:center}
+@media (max-width:640px){.mq-item{flex-basis:190px;margin-right:14px}.mq-item h3{font-size:18px}.mq-track{animation-duration:55s}}
+@media (prefers-reduced-motion: reduce){.mq-track{animation:none}.mq-dup{display:none}.marquee{overflow-x:auto;-webkit-mask-image:none;mask-image:none;padding-left:var(--gut-l)}}
+
+/* done */
+.done{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px 22px}
+.done li{min-width:0}
+.done img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:12px;box-shadow:0 8px 20px rgba(30,26,23,.16)}
+.done p{margin-top:12px;font-size:19px;line-height:1.45}
+.done .tag{display:block;margin-top:6px;font-size:14px}
+@media (max-width:860px){.done{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.done{grid-template-columns:1fr}}
+
+/* inside pages */
+.pages{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pages li{min-width:0}
+.pages button{all:unset;cursor:zoom-in;display:block;width:100%}
+.pages button:focus-visible{outline:3px solid var(--brick);outline-offset:3px}
+.pages img{width:100%;border:1px solid var(--rule);border-radius:4px;box-shadow:0 10px 24px rgba(30,26,23,.14);background:#fff}
+.pages .tag{display:block;margin-top:14px;font-size:14px}
+.pages p{margin-top:4px;font-size:19px;line-height:1.45}
+.zoom-hint{font-family:var(--label);font-weight:700;font-size:16px;color:var(--ink-2);margin-top:20px}
+@media (max-width:860px){.pages{grid-template-columns:1fr;max-width:460px}}
+
+/* parts */
+.parts{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.parts li{display:grid;align-content:start;grid-template-columns:86px 1fr;gap:4px 14px;padding:18px 0;border-bottom:1px solid var(--rule);min-width:0}
+.parts .tag{padding-top:6px;font-size:14px}
+.parts h3{font-size:23px}
+.parts p{grid-column:2;font-style:italic;color:var(--ink-2);font-size:18px;line-height:1.45}
+.parts .rng{grid-column:2;font-family:var(--label);font-weight:700;font-size:15px;color:var(--ink-2)}
+@media (max-width:760px){.parts{grid-template-columns:1fr}.parts li{grid-template-columns:72px 1fr}}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+.extra{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:22px;display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:center;min-width:0}
+.extra img{border-radius:6px;border:1px solid var(--rule)}
+.extra h3{margin:4px 0 8px}
+.extra p{color:var(--ink-2);font-size:18px;line-height:1.5}
+.extra .tag{font-size:14px}
+@media (max-width:860px){.extras{grid-template-columns:1fr}}
+@media (max-width:440px){.extra{grid-template-columns:1fr}.extra img{max-width:220px}}
+
+/* cost */
+.cost{margin-top:36px;background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:8px 26px 24px;max-width:860px}
+.cost table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.cost th{font-family:var(--label);font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);text-align:left;padding:16px 0 10px;border-bottom:2px solid var(--ink)}
+.cost th:last-child,.cost td:last-child{text-align:right}
+.cost td{padding:14px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.cost td small{display:block;font-family:var(--label);font-weight:700;font-size:15px;color:var(--brick);margin-top:2px}
+.cost td:last-child{font-weight:600;white-space:nowrap;padding-left:16px}
+.cost tfoot td{border-bottom:0;padding-top:18px;font-family:var(--display);font-size:28px;font-weight:600}
+.cost-scroll{overflow-x:auto}
+.cost-gap{margin-top:22px;background:var(--night);color:var(--on-night);border-radius:12px;padding:26px;max-width:860px}
+.cost-gap strong{font-family:var(--display);font-weight:600;font-size:clamp(26px,3.6vw,34px);line-height:1.2;display:block}
+.cost-gap span{display:block;margin-top:8px;color:var(--on-night)}
+.cost-gap em{color:var(--mustard);font-style:normal;font-weight:600}
+.working{margin-top:16px;font-size:17px;color:var(--ink-2);max-width:860px;line-height:1.5}
+
+/* host */
+.host .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.host-photos{display:grid;gap:18px;min-width:0}
+.host-photos img{border-radius:12px;box-shadow:0 10px 24px rgba(30,26,23,.18)}
+.host-photos figure{margin:0}
+.host-photos figcaption{font-style:italic;font-size:17px;color:var(--ink-2);margin-top:8px}
+.host-photos .small{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:center}
+.letter{min-width:0}
+.letter h2{margin-bottom:22px}
+.letter p+p{margin-top:16px}
+.sign{font-family:var(--display);font-style:italic;font-size:28px;margin-top:22px!important}
+@media (max-width:860px){.host .wrap{grid-template-columns:1fr;gap:32px}.letter{order:-1}}
+
+/* reviews */
+.reviews{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.reviews li{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:26px;min-width:0;display:flex;flex-direction:column;gap:14px}
+.reviews li.placeholder{border:2px dashed var(--brick)}
+.reviews blockquote{margin:0;font-style:italic;font-size:20px;line-height:1.5}
+.reviews cite{font-style:normal;font-family:var(--label);font-weight:700;font-size:16px;color:var(--ink-2);margin-top:auto}
+.reviews .ph{align-self:flex-start;font-family:var(--label);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:var(--brick);color:#fff;border-radius:4px;padding:3px 8px}
+@media (max-width:860px){.reviews{grid-template-columns:1fr}}
+
+/* guarantee */
+.guarantee{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--card);border:2px solid var(--brick);border-radius:14px;padding:30px;max-width:860px;margin:0 auto}
+.seal{width:120px;height:120px;border-radius:50%;background:var(--brick);color:#fff;display:grid;place-items:center;text-align:center;font-family:var(--label);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
+.seal b{display:block;font-family:var(--display);font-size:46px;letter-spacing:0;font-weight:600}
+.guarantee h2{font-size:clamp(28px,3.4vw,36px);margin-bottom:10px}
+@media (max-width:600px){.guarantee{grid-template-columns:1fr;justify-items:center;text-align:center;padding:26px 20px}}
+
+/* faq */
+.faq{margin-top:28px;border-top:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:64px;padding:14px 0;font-family:var(--display);font-weight:600;font-size:22px;line-height:1.3}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:0 0 40px;height:40px;border-radius:50%;border:2px solid var(--brick);color:var(--brick);display:grid;place-items:center;font-family:var(--label);font-weight:800;font-size:24px;line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 22px;color:var(--ink-2);max-width:62ch}
+
+/* final */
+.final{position:relative;background:var(--night);color:var(--on-night);text-align:center;overflow:hidden}
+.final::before{content:"";position:absolute;inset:0;background:url("images/luz-de-la-cocina.webp") center/cover no-repeat;opacity:.18}
+.final .wrap{position:relative}
+.final .eyebrow{color:var(--mustard)}
+.final h2{color:var(--on-night);font-size:clamp(32px,4.6vw,50px);max-width:20ch;margin:0 auto}
+.final h2 em{color:var(--mustard)}
+.final .lede{max-width:52ch;margin:18px auto 0;color:var(--on-night)}
+.final .price-row{justify-content:center}
+.final .price{color:#fff}
+.final .was{color:#D8C9B6}
+.final .price-note{color:var(--mustard)}
+.final .cta-block{justify-items:center}
+.final .trust{color:var(--on-night)}
+.final .goodbye{margin:40px auto 0;max-width:46ch;font-style:italic;font-size:21px;color:var(--on-night)}
+.final .goodbye span{display:block;font-family:var(--display);margin-top:6px;color:var(--mustard)}
+@media (max-width:860px){.final .cta-block .btn{width:100%}}
+
+/* footer */
+footer{padding-block:44px 32px;font-size:17px;color:var(--ink-2);line-height:1.55}
+footer .wrap{display:grid;gap:18px}
+footer b{color:var(--ink);font-family:var(--display);font-size:20px}
+.support{color:var(--ink)}
+.copy-email{font-family:var(--label);font-weight:700;font-size:15px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;padding:6px 10px;cursor:pointer;margin-left:6px}
+.legal{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--label);font-weight:700;font-size:16px}
+.legal a{color:var(--ink);padding:6px 0}
+.disclosure{border-top:1px solid var(--rule);padding-top:18px;max-width:80ch;font-size:16px}
+
+/* sticky bar */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--paper-2);border-top:1px solid var(--rule);box-shadow:0 -6px 18px rgba(30,26,23,.10);padding:10px var(--gut-r) calc(10px + env(safe-area-inset-bottom,0px)) var(--gut-l);transform:translateY(110%);transition:transform .25s ease}
+.sticky.show{transform:none}
+.sticky .in{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.sticky .p{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;min-width:0}
+.sticky .p strong{font-family:var(--display);font-size:32px;line-height:1}
+.sticky .p s{font-family:var(--display);font-size:20px;color:var(--ink-2)}
+.sticky .p span{font-family:var(--label);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--brick)}
+@media (max-width:480px){.sticky .p span{display:none}.sticky .btn{padding:10px 16px;font-size:18px}}
+
+/* lightbox */
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(96vw,1000px);max-height:94vh;overflow:visible}
+dialog.lb::backdrop{background:rgba(20,15,12,.88)}
+dialog.lb img{max-height:86vh;width:auto;margin:0 auto;border-radius:6px;background:#fff}
+dialog.lb p{color:#fff;text-align:center;font-size:18px;margin-top:10px}
+.lb-close{position:fixed;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));width:56px;height:56px;border-radius:50%;border:0;background:#fff;color:var(--ink);font-size:30px;line-height:1;cursor:pointer;font-family:var(--label);font-weight:800}
+
+/* cookie */
+.cookie{position:fixed;left:var(--gut-l);right:var(--gut-r);bottom:calc(96px + env(safe-area-inset-bottom,0px));z-index:45;background:var(--night);color:var(--on-night);border-radius:12px;padding:16px 18px;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;font-size:17px;max-width:720px;margin:0 auto}
+.cookie button{min-height:48px;padding:8px 18px;border-radius:8px;border:0;background:var(--mustard);color:var(--night);font-family:var(--label);font-weight:800;font-size:17px;cursor:pointer}
+
+/* hero checklist + unit price */
+.checks{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px;max-width:52ch}
+.checks li{display:grid;grid-template-columns:28px 1fr;gap:10px;align-items:start;color:var(--ink);line-height:1.45}
+.checks li::before{content:"";width:24px;height:24px;margin-top:2px;border-radius:50%;background:var(--brick) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.unit{font-family:var(--label);font-weight:800;font-size:17px;color:var(--ink);margin-top:6px}
+.unit b{color:var(--brick)}
+@media (max-width:860px){.hero .checks{order:6}}
+
+/* moments */
+.moments-lede{font-family:var(--display);font-style:italic;font-weight:500;font-size:clamp(22px,2.6vw,27px);line-height:1.4;max-width:40ch;margin-top:18px;color:var(--ink)}
+.moments{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.moment{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:26px;min-width:0;display:grid;gap:14px;align-content:start}
+.moment .when{font-family:var(--label);font-weight:800;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:var(--brick)}
+.moment .scene{font-family:var(--display);font-size:23px;line-height:1.35;font-weight:500}
+.moment .where{border-top:1px solid var(--rule);padding-top:14px;font-family:var(--label);font-weight:800;font-size:15px;letter-spacing:.04em;color:var(--ink)}
+.moment .where span{color:var(--brick)}
+.moment ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.moment li{display:grid;grid-template-columns:18px 1fr;gap:10px;line-height:1.45;color:var(--ink-2)}
+.moment li::before{content:"";width:8px;height:8px;margin-top:11px;border-radius:50%;background:var(--brick)}
+.more-line{margin-top:28px;font-family:var(--display);font-size:24px;font-weight:600}
+@media (max-width:860px){.moments{grid-template-columns:1fr}}
+
+/* picker */
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.chip{min-height:52px;padding:10px 18px;border-radius:999px;border:2px solid var(--brick);background:var(--card);color:var(--brick);font-family:var(--label);font-weight:800;font-size:18px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.chip[aria-pressed="true"]{background:var(--brick);color:#fff}
+.chip[aria-pressed="true"]::before{content:"✓"}
+.pick-sum{margin-top:26px;font-family:var(--display);font-weight:600;font-size:26px}
+.pick-sum em{color:var(--brick);font-style:normal}
+.picks{display:grid;gap:20px;margin-top:18px}
+.pick{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:22px 24px;min-width:0}
+.pick h3{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:10px;margin-bottom:6px}
+.pick h3 span{font-family:var(--label);font-weight:800;font-size:15px;color:var(--brick);letter-spacing:.04em}
+.pick ol{list-style:none;margin:0;padding:0;columns:2 340px;column-gap:40px}
+.pick li{break-inside:avoid}
+.pick li{display:grid;grid-template-columns:auto 1fr auto;gap:4px 12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--rule);font-size:18px;line-height:1.4}
+.pick li:last-child{border-bottom:0}
+.pick .n{font-family:var(--label);font-weight:800;font-size:14px;color:var(--brick);font-variant-numeric:tabular-nums;min-width:30px}
+.pick .p{font-family:var(--label);font-weight:700;font-size:14px;color:var(--ink-2);white-space:nowrap}
+.pick .full{grid-column:2/4;justify-self:start;font-family:var(--label);font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;background:var(--brick);color:#fff;border-radius:4px;padding:2px 7px}
+
+/* myths */
+.myths{list-style:none;margin:36px 0 0;padding:0;border-top:2px solid var(--ink)}
+.myth{display:grid;grid-template-columns:1fr 1.5fr;gap:8px 32px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.myth .we{font-family:var(--display);font-size:22px;line-height:1.35;color:var(--ink-2)}
+.myth .we small,.myth .she small{display:block;font-family:var(--label);font-weight:800;font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:4px}
+.myth .we small{color:var(--ink-2)}
+.myth .she small{color:var(--brick)}
+.myth .she b{font-family:var(--display);font-weight:600;font-size:22px;display:block;line-height:1.35}
+.myth .she p{color:var(--ink-2);margin-top:4px}
+.myth .she .tag{display:block;margin-top:6px;font-size:14px}
+@media (max-width:760px){.myth{grid-template-columns:1fr}}
+.wont{margin-top:56px;background:var(--night);color:var(--on-night);border-radius:14px;padding:32px}
+.wont h3{font-size:clamp(26px,3vw,32px);color:var(--on-night)}
+.wont h3 em{color:var(--mustard);font-weight:500}
+.wont ul{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:18px 32px}
+.wont li{min-width:0}
+.wont li b{display:block;font-family:var(--display);font-weight:600;font-size:21px;color:#fff}
+.wont li span{color:var(--on-night)}
+.wont .last{margin-top:22px;font-style:italic;color:var(--mustard);font-size:20px}
+@media (max-width:760px){.wont ul{grid-template-columns:1fr}.wont{padding:26px 20px}}
+
+/* offer box */
+.offer{display:grid;grid-template-columns:220px 1fr;gap:36px;align-items:start;background:var(--card);border:2px solid var(--brick);border-radius:16px;padding:34px;max-width:960px;margin:0 auto}
+.offer img{border-radius:6px;box-shadow:0 14px 30px rgba(30,26,23,.22)}
+.offer h2{font-size:clamp(30px,3.6vw,40px)}
+.stack{list-style:none;margin:20px 0 0;padding:0;border-top:1px solid var(--rule)}
+.stack li{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:12px 0;border-bottom:1px solid var(--rule);line-height:1.45}
+.stack li::before{content:"";width:24px;height:24px;margin-top:2px;border-radius:50%;background:var(--brick) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat}
+.stack b{font-family:var(--display);font-weight:600;font-size:20px}
+.stack span{display:block;color:var(--ink-2);font-size:18px}
+.units{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+.units div{background:var(--paper-2);border-radius:10px;padding:14px 10px;text-align:center}
+.units strong{display:block;font-family:var(--display);font-weight:600;font-size:34px;line-height:1;font-variant-numeric:tabular-nums}
+.units span{display:block;margin-top:6px;font-family:var(--label);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2)}
+.offer .cta-block{margin-top:22px}
+@media (max-width:860px){.offer{grid-template-columns:1fr;padding:26px 20px;gap:24px}.offer img{max-width:150px;margin:0 auto}.offer .cta-block,.offer .cta-block .btn{width:100%}}
+@media (max-width:400px){.units strong{font-size:28px}}
+
+/* guarantee voice */
+.guarantee .sig{font-family:var(--display);font-style:italic;font-size:22px;margin-top:10px}
+.guarantee p+p{margin-top:10px}
+
+/* exit popup */
+dialog.exit{border:0;padding:0;border-radius:16px;max-width:min(92vw,560px);width:100%;max-height:92vh;overflow:auto;background:var(--paper);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.4)}
+dialog.exit::backdrop{background:rgba(20,15,12,.72)}
+.exit-in{padding:34px 28px 26px;text-align:center;display:grid;gap:14px;justify-items:center}
+.exit-in img{width:120px;border-radius:6px;box-shadow:0 10px 24px rgba(30,26,23,.22)}
+.exit-in h2{font-size:clamp(28px,6vw,36px)}
+.exit-in p{color:var(--ink-2);max-width:40ch}
+.exit-in .price-row{justify-content:center;margin-top:0}
+.exit-in .price{font-size:46px}
+.exit-in .btn{width:100%}
+.exit-close{position:absolute;top:10px;right:10px;width:52px;height:52px;border-radius:50%;border:2px solid var(--rule);background:var(--card);color:var(--ink);font-size:26px;line-height:1;cursor:pointer;font-family:var(--label);font-weight:800}
+@media (max-width:560px),(max-height:760px){.exit-in img{display:none}.exit-in{padding:30px 20px 18px;gap:10px}.exit-in .price{font-size:40px}}
+.no-thanks{all:unset;cursor:pointer;font-family:var(--label);font-weight:700;font-size:17px;color:var(--ink-2);text-decoration:underline;padding:10px}
+.no-thanks:focus-visible{outline:3px solid var(--brick);outline-offset:3px}
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+
+<!-- ============ ANALÍTICA (vacío a propósito) ============
+     Meta Pixel y Google Analytics 4 se cargan solos SOLO si pones su ID
+     en CONFIG.metaPixelId / CONFIG.ga4Id (más abajo, en el script).
+     Cuando hay alguno activo, aparece el aviso de cookies.
+     ====================================================== -->
+</head>
+<body>
+
+<div class="announce" id="announce" hidden>
+  Precio de lanzamiento: <span data-c="launchPrice">$27</span> hasta el <span data-c="launchEndText"></span>. Después sube a <span data-c="regularPrice">$55</span>.
+</div>
+
+<header class="site-head">
+  <div class="wrap">
+    <div class="brand">
+      <b>El Recetario de la Puerta de Atrás</b>
+      <span>Mama Ozella · Condado de Bolívar, Misisipi</span>
+    </div>
+    <a class="btn btn-sm js-buy" href="#comprar">Quiero el libro&nbsp;·&nbsp;<span data-c="price">$27</span></a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="eyebrow">Un lugar en la mesa de Mama Ozella</p>
+      <h1>Su comida salió en el menú. <em>Su nombre, nunca.</em></h1>
+      <p class="story">Mi mamá, Hattie, cocinó quince años en un café de Misisipi. Siempre entró por la puerta de atrás.</p>
+      <p class="promise">Este libro trae <b>220 entradas</b> con lo que ella hacía a propósito: <b>qué hacer, por qué funciona y cómo saber que quedó bien</b>.</p>
+      <ul class="checks">
+        <li>14 fotos que te enseñan cómo se ve “listo”</li>
+        <li>Las 16 recetas que más me piden, completas y con foto</li>
+        <li>La temperatura exacta del pollo, el relleno y los pasteles</li>
+        <li>Medidas en tazas y en gramos, en °F y en °C</li>
+      </ul>
+      <div class="price-row">
+        <span class="price" data-c="price">$27</span>
+        <s class="was js-was" data-c="regularPrice">$55</s>
+        <span class="price-note js-launch">Precio de lanzamiento<span class="js-until"></span></span>
+      </div>
+      <div class="cta-block">
+        <a class="btn js-buy" id="hero-buy" href="#comprar">Quiero el libro&nbsp;·&nbsp;<span data-c="price">$27</span></a>
+        <p class="trust">Un solo pago · descarga inmediata · garantía de <span data-c="refundDays">30</span> días</p>
+        <p class="unit">Son <b data-c="perEntry">12¢</b> por cada entrada.</p>
+        <p class="bonus-line">De regalo: las 24 Tarjetas de Cocina para imprimir.</p>
+      </div>
+    </div>
+    <div class="cover">
+      <img src="images/portada.webp" width="720" height="1080" alt="Portada del libro El Recetario de la Puerta de Atrás: Mama Ozella sonríe en su cocina de troncos con una bandeja de pollo frito, frente a un pastel de camote y un sartén de pan de maíz." fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<section class="numbers" aria-label="El libro en números">
+  <div class="wrap">
+    <ul>
+      <li><strong>220</strong><span>entradas numeradas</span></li>
+      <li><strong>237</strong><span>páginas, un PDF</span></li>
+      <li><strong>14</strong><span>fotos de “listo”</span></li>
+      <li><strong>16</strong><span>recetas completas</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="te-ha-pasado">
+  <div class="wrap">
+    <p class="eyebrow">¿Te ha pasado?</p>
+    <h2>La receta la tienes. <em>Lo que falta es el porqué.</em></h2>
+    <p class="moments-lede">“Para que la cocina no se muera con la cocinera”, me dijo mi nieta Kiara. Cuando se va la que cocinaba, se va también todo lo que nunca escribió.</p>
+    <ul class="moments">
+      <li class="moment"><span class="when">Acción de Gracias</span><p class="scene">El relleno salió seco otra vez. O aguado en el centro. Nadie dijo nada, pero nadie repitió.</p><p class="where">En el libro: <span>Entrada 69 · pág. 62</span></p><ul><li>El número exacto en el centro del molde: 165 °F (74 °C)</li><li>Cómo se siente al presionar con la cuchara: húmedo pero firme</li><li>Por qué el pan de maíz de ayer es la base (Entrada 126)</li></ul></li>
+      <li class="moment"><span class="when">Domingo, 1 de la tarde</span><p class="scene">El pollo se ve dorado por fuera. Lo cortas, y junto al hueso todavía está rosado.</p><p class="where">En el libro: <span>Entrada 44 · pág. 45</span></p><ul><li>Por qué el color de afuera no dice nada del hueso</li><li>La burbuja que te avisa antes que el termómetro</li><li>Por qué descansa en rejilla y no en papel (Entrada 10)</li></ul></li>
+      <li class="moment"><span class="when">El desayuno</span><p class="scene">Los biscuits salieron bajitos y duros, como galletas, aunque seguiste la receta al pie de la letra.</p><p class="where">En el libro: <span>Entrada 22 · pág. 30</span></p><ul><li>De 10 a 15 vueltas con el tenedor, y para ahí</li><li>Por qué la masa fea es la masa buena (Entrada 46)</li><li>La taza de harina que lleva una quinta parte de más (Entrada 21)</li></ul></li>
+      <li class="moment"><span class="when">Te llama tu nieto</span><p class="scene">Te pide las berzas de la bisabuela. Y te das cuenta de que nadie sabe en qué orden iba todo.</p><p class="where">En el libro: <span>Entrada 6 · pág. 22</span></p><ul><li>La carne ahumada va primero, sola en el agua, una hora</li><li>El color de té ralo del caldo que vale la pena (Entrada 53)</li><li>Listas cuando se doblan sobre la cuchara (Entrada 54)</li></ul></li>
+      <li class="moment"><span class="when">La hoja de la iglesia</span><p class="scene">Tu nombre ya está en la lista: macarrones para cincuenta. Nunca has hecho más de una bandeja.</p><p class="where">En el libro: <span>Entrada 198 · pág. 154</span></p><ul><li>Qué se multiplica tal cual, y la sal solo a tres cuartas partes</li><li>Por qué varias bandejas y no una olla gigante</li><li>Macarrones para 50, en bandejas (Entrada 202)</li></ul></li>
+      <li class="moment"><span class="when">Saliendo del horno</span><p class="scene">El pastel de camote se agrietó en el centro y soltó agua en el plato.</p><p class="where">En el libro: <span>Entrada 59 · pág. 56</span></p><ul><li>Se saca cuando el centro todavía tiembla un poquito</li><li>El centro marca de 175 a 180 °F (79 a 82 °C)</li><li>Por qué sigue cocinándose fuera del horno</li></ul></li>
+    </ul>
+    <p class="more-line">Y otras doscientas entradas como estas, del sartén de hierro a la lata de grasa.</p>
+    <div class="cta-block"><a class="btn js-buy" href="#comprar">Quiero el libro&nbsp;·&nbsp;<span data-c="price">$27</span></a></div>
+  </div>
+</section>
+
+<section id="elige">
+  <div class="wrap">
+    <p class="eyebrow">Elige lo tuyo</p>
+    <h2>¿Qué quieres que te salga <em>como a ella?</em></h2>
+    <p class="intro">Toca uno o varios. Abajo aparece cada entrada del libro que habla de eso, con su número y su página.</p>
+    <div class="chips" id="chips" role="group" aria-label="Elige platos"></div>
+    <p class="pick-sum" id="pick-sum" aria-live="polite"></p>
+    <div class="picks" id="picks"></div>
+  </div>
+</section>
+
+<section class="band" id="las-dieciseis">
+  <div class="wrap">
+    <p class="eyebrow">Parte 9 · Las Dieciséis</p>
+    <h2>Los dieciséis platos <em>que más me piden.</em></h2>
+    <p class="intro">Cada uno escrito completo: lo que necesitas, cómo se hace, por qué y cómo saber que quedó bien. Con su foto y su página.</p>
+    <p class="zoom-hint">Toca un plato para verlo más grande.</p>
+  </div>
+  <div class="mq-wrap" id="mq">
+  <div class="marquee">
+    <ul class="mq-track"><li class="mq-item"><button type="button" data-full="images/plato-01.webp" data-cap="Pollo frito del Sur · pág. 168"><img data-src="images/plato-01-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Pollo frito dorado en un sartén de hierro, con una tapa de olla al lado."></button><h3>Pollo frito del Sur</h3><p class="pg">pág. 168</p></li><li class="mq-item"><button type="button" data-full="images/plato-02.webp" data-cap="Berzas con su caldo · pág. 171"><img data-src="images/plato-02-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Olla de berzas en su caldo con un codillo ahumado, junto a un plato de pan de maíz."></button><h3>Berzas con su caldo</h3><p class="pg">pág. 171</p></li><li class="mq-item"><button type="button" data-full="images/plato-03.webp" data-cap="Chuletas de cerdo en salsa de cebolla · pág. 174"><img data-src="images/plato-03-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Chuletas de cerdo en salsa de cebolla en un sartén de hierro, con un plato de arroz blanco."></button><h3>Chuletas en salsa de cebolla</h3><p class="pg">pág. 174</p></li><li class="mq-item"><button type="button" data-full="images/plato-04.webp" data-cap="Pan de maíz en sartén de hierro · pág. 177"><img data-src="images/plato-04-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Pan de maíz dorado en un sartén de hierro, con una rebanada cortada y mantequilla al lado."></button><h3>Pan de maíz en sartén de hierro</h3><p class="pg">pág. 177</p></li><li class="mq-item"><button type="button" data-full="images/plato-05.webp" data-cap="Pollo con dumplings · pág. 180"><img data-src="images/plato-05-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Pollo con dumplings en una olla de hierro y servido en un tazón."></button><h3>Pollo con dumplings</h3><p class="pg">pág. 180</p></li><li class="mq-item"><button type="button" data-full="images/plato-06.webp" data-cap="Macarrones con queso al horno · pág. 183"><img data-src="images/plato-06-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Macarrones con queso al horno, con la costra dorada."></button><h3>Macarrones con queso al horno</h3><p class="pg">pág. 183</p></li><li class="mq-item"><button type="button" data-full="images/plato-07.webp" data-cap="Pastel de camote · pág. 186"><img data-src="images/plato-07-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Pastel de camote con una rebanada servida y dos camotes asados al lado."></button><h3>Pastel de camote</h3><p class="pg">pág. 186</p></li><li class="mq-item"><button type="button" data-full="images/plato-08.webp" data-cap="Cobbler de durazno · pág. 189"><img data-src="images/plato-08-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Cobbler de durazno en un sartén de hierro y un tazón servido con helado."></button><h3>Cobbler de durazno</h3><p class="pg">pág. 189</p></li></ul>
+    <ul class="mq-track mq-dup" aria-hidden="true"><li class="mq-item"><button type="button" data-full="images/plato-01.webp" data-cap="Pollo frito del Sur · pág. 168" tabindex="-1"><img data-src="images/plato-01-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Pollo frito del Sur</h3><p class="pg">pág. 168</p></li><li class="mq-item"><button type="button" data-full="images/plato-02.webp" data-cap="Berzas con su caldo · pág. 171" tabindex="-1"><img data-src="images/plato-02-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Berzas con su caldo</h3><p class="pg">pág. 171</p></li><li class="mq-item"><button type="button" data-full="images/plato-03.webp" data-cap="Chuletas de cerdo en salsa de cebolla · pág. 174" tabindex="-1"><img data-src="images/plato-03-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Chuletas en salsa de cebolla</h3><p class="pg">pág. 174</p></li><li class="mq-item"><button type="button" data-full="images/plato-04.webp" data-cap="Pan de maíz en sartén de hierro · pág. 177" tabindex="-1"><img data-src="images/plato-04-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Pan de maíz en sartén de hierro</h3><p class="pg">pág. 177</p></li><li class="mq-item"><button type="button" data-full="images/plato-05.webp" data-cap="Pollo con dumplings · pág. 180" tabindex="-1"><img data-src="images/plato-05-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Pollo con dumplings</h3><p class="pg">pág. 180</p></li><li class="mq-item"><button type="button" data-full="images/plato-06.webp" data-cap="Macarrones con queso al horno · pág. 183" tabindex="-1"><img data-src="images/plato-06-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Macarrones con queso al horno</h3><p class="pg">pág. 183</p></li><li class="mq-item"><button type="button" data-full="images/plato-07.webp" data-cap="Pastel de camote · pág. 186" tabindex="-1"><img data-src="images/plato-07-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Pastel de camote</h3><p class="pg">pág. 186</p></li><li class="mq-item"><button type="button" data-full="images/plato-08.webp" data-cap="Cobbler de durazno · pág. 189" tabindex="-1"><img data-src="images/plato-08-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Cobbler de durazno</h3><p class="pg">pág. 189</p></li></ul>
+  </div>
+  <div class="marquee">
+    <ul class="mq-track rev"><li class="mq-item"><button type="button" data-full="images/plato-09.webp" data-cap="Pudín de plátano · pág. 192"><img data-src="images/plato-09-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Pudín de plátano con merengue tostado en un molde de vidrio, con un plátano y galletas de vainilla."></button><h3>Pudín de plátano</h3><p class="pg">pág. 192</p></li><li class="mq-item"><button type="button" data-full="images/plato-10.webp" data-cap="Pound cake de antes · pág. 195"><img data-src="images/plato-10-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Pound cake dorado en forma de rosca, con dos rebanadas cortadas."></button><h3>Pound cake de antes</h3><p class="pg">pág. 195</p></li><li class="mq-item"><button type="button" data-full="images/plato-11.webp" data-cap="Bagre frito con hushpuppies · pág. 198"><img data-src="images/plato-11-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Filetes de bagre frito con hushpuppies, limón y salsa."></button><h3>Bagre frito con hushpuppies</h3><p class="pg">pág. 198</p></li><li class="mq-item"><button type="button" data-full="images/plato-12.webp" data-cap="Tamales calientes del Delta · pág. 201"><img data-src="images/plato-12-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Tamales calientes del Delta envueltos en hoja de maíz, en una bandeja roja, con galletas saladas."></button><h3>Tamales calientes del Delta</h3><p class="pg">pág. 201</p></li><li class="mq-item"><button type="button" data-full="images/plato-13.webp" data-cap="Frijoles de ojo negro con papada · pág. 204"><img data-src="images/plato-13-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Olla de frijoles de ojo negro con papada, un tazón servido y pan de maíz."></button><h3>Frijoles de ojo negro con papada</h3><p class="pg">pág. 204</p></li><li class="mq-item"><button type="button" data-full="images/plato-14.webp" data-cap="Camotes confitados · pág. 207"><img data-src="images/plato-14-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Camotes confitados en su almíbar dentro de una olla de hierro."></button><h3>Camotes confitados</h3><p class="pg">pág. 207</p></li><li class="mq-item"><button type="button" data-full="images/plato-15.webp" data-cap="Relleno de pan de maíz · pág. 210"><img data-src="images/plato-15-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Relleno de pan de maíz horneado en un molde, con una salsera al lado."></button><h3>Relleno de pan de maíz</h3><p class="pg">pág. 210</p></li><li class="mq-item"><button type="button" data-full="images/plato-16.webp" data-cap="Tea cakes de la abuela · pág. 213"><img data-src="images/plato-16-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt="Tea cakes de la abuela en un plato, con un frasco de galletas y una taza de café."></button><h3>Tea cakes de la abuela</h3><p class="pg">pág. 213</p></li></ul>
+    <ul class="mq-track rev mq-dup" aria-hidden="true"><li class="mq-item"><button type="button" data-full="images/plato-09.webp" data-cap="Pudín de plátano · pág. 192" tabindex="-1"><img data-src="images/plato-09-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Pudín de plátano</h3><p class="pg">pág. 192</p></li><li class="mq-item"><button type="button" data-full="images/plato-10.webp" data-cap="Pound cake de antes · pág. 195" tabindex="-1"><img data-src="images/plato-10-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Pound cake de antes</h3><p class="pg">pág. 195</p></li><li class="mq-item"><button type="button" data-full="images/plato-11.webp" data-cap="Bagre frito con hushpuppies · pág. 198" tabindex="-1"><img data-src="images/plato-11-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Bagre frito con hushpuppies</h3><p class="pg">pág. 198</p></li><li class="mq-item"><button type="button" data-full="images/plato-12.webp" data-cap="Tamales calientes del Delta · pág. 201" tabindex="-1"><img data-src="images/plato-12-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Tamales calientes del Delta</h3><p class="pg">pág. 201</p></li><li class="mq-item"><button type="button" data-full="images/plato-13.webp" data-cap="Frijoles de ojo negro con papada · pág. 204" tabindex="-1"><img data-src="images/plato-13-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Frijoles de ojo negro con papada</h3><p class="pg">pág. 204</p></li><li class="mq-item"><button type="button" data-full="images/plato-14.webp" data-cap="Camotes confitados · pág. 207" tabindex="-1"><img data-src="images/plato-14-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Camotes confitados</h3><p class="pg">pág. 207</p></li><li class="mq-item"><button type="button" data-full="images/plato-15.webp" data-cap="Relleno de pan de maíz · pág. 210" tabindex="-1"><img data-src="images/plato-15-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Relleno de pan de maíz</h3><p class="pg">pág. 210</p></li><li class="mq-item"><button type="button" data-full="images/plato-16.webp" data-cap="Tea cakes de la abuela · pág. 213" tabindex="-1"><img data-src="images/plato-16-sm.webp" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="400" height="299" decoding="async" alt=""></button><h3>Tea cakes de la abuela</h3><p class="pg">pág. 213</p></li></ul>
+  </div>
+  </div>
+</section>
+
+<section id="listo">
+  <div class="wrap">
+    <p class="eyebrow">Parte 2 · Cómo saber que está listo</p>
+    <h2>Otros libros te dicen cuándo está listo. <em>Este te lo enseña.</em></h2>
+    <p class="intro">Mamá nunca miró un reloj para saber si el pollo estaba listo. Por eso el libro trae 14 fotos de cómo se ve cada cosa cuando ya está. Aquí tienes seis.</p>
+    <ul class="done">
+      <li><img src="images/listo-grasa.webp" width="700" height="469" loading="lazy" alt="Un sartén de hierro con grasa caliente; una pizca de harina burbujea en el centro."><p>Así canta la harina cuando la grasa está lista para freír.</p><span class="tag">Entrada 43 · pág. 44</span></li>
+      <li><img src="images/listo-pollo.webp" width="700" height="469" loading="lazy" alt="Piezas de pollo frito descansando en una rejilla, una abierta y blanca por dentro."><p>Así se ve el pollo frito cuando está listo: costra dura y dorada.</p><span class="tag">Entrada 44 · pág. 45</span></li>
+      <li><img src="images/listo-pan-de-maiz.webp" width="700" height="469" loading="lazy" alt="Pan de maíz dorado y firme en un sartén de hierro sobre la mesa."><p>Así se ve el pan de maíz cuando ya está.</p><span class="tag">Entrada 49 · pág. 49</span></li>
+      <li><img src="images/listo-berzas.webp" width="700" height="469" loading="lazy" alt="Una cuchara levanta berzas oscuras y sedosas de la olla de hierro."><p>Así se ven las berzas cuando están listas: sedosas, que se doblan en la cuchara.</p><span class="tag">Entrada 54 · pág. 52</span></li>
+      <li><img src="images/listo-almibar.webp" width="700" height="445" loading="lazy" alt="Una cuchara deja caer almíbar espeso y brillante sobre los camotes en la olla."><p>Así brilla el almíbar de los camotes: cubre la cuchara y cae en un hilo.</p><span class="tag">Entrada 58 · pág. 55</span></li>
+      <li><img src="images/listo-pastel.webp" width="700" height="469" loading="lazy" alt="Un pastel de natilla recién horneado enfriándose en una rejilla."><p>Así se ve un pastel de natilla listo para salir del horno.</p><span class="tag">Entrada 59 · pág. 56</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="por-dentro">
+  <div class="wrap">
+    <p class="eyebrow">Mira por dentro</p>
+    <h2>Así se ve <em>cuando lo abres.</em></h2>
+    <p class="intro">Estas son tres páginas del libro, tal como se abren en tu teléfono. La letra es grande a propósito, y cada página se imprime bien en papel normal.</p>
+    <ul class="pages">
+      <li><button type="button" data-full="images/pagina-019.webp" data-cap="Entrada 1 · pág. 19"><img src="images/pagina-019.webp" width="900" height="1165" loading="lazy" alt="Página 19 del libro: Entrada 1, La grasa fría hace la capa, con sus partes Qué es, Cómo se hace, Por qué funciona y Cómo saber."></button><span class="tag">Entrada 1 · pág. 19</span><p>La primera ley de Mamá Hattie: la grasa fría hace la capa.</p></li>
+      <li><button type="button" data-full="images/pagina-052.webp" data-cap="Entradas 53 y 54 · pág. 52"><img src="images/pagina-052.webp" width="900" height="1165" loading="lazy" alt="Página 52 del libro: cómo saber que el caldo y las berzas están listos, con dos fotos."></button><span class="tag">Entradas 53 y 54 · pág. 52</span><p>El caldo de las berzas y cómo saber que están tiernas, con sus fotos.</p></li>
+      <li><button type="button" data-full="images/pagina-168.webp" data-cap="Entrada 205 · pág. 168"><img src="images/pagina-168.webp" width="900" height="1165" loading="lazy" alt="Página 168 del libro: Entrada 205, Pollo frito del Sur, con foto grande, porciones y tiempo."></button><span class="tag">Entrada 205 · pág. 168</span><p>Parte 9: el pollo frito del Sur, completo y con su foto.</p></li>
+    </ul>
+    <p class="zoom-hint">Toca una página para verla más grande.</p>
+  </div>
+</section>
+
+<section id="lo-que-hacemos">
+  <div class="wrap">
+    <p class="eyebrow">Parte 1 · Las Leyes de Mamá Hattie</p>
+    <h2>Lo que casi todos hacemos. <em>Y Mamá no.</em></h2>
+    <p class="intro">Muchas costumbres de cocina se repiten sin que nadie pregunte por qué. Mamá sí preguntaba. Aquí van seis de sus leyes, con la razón que trae el libro.</p>
+    <ul class="myths">
+      <li class="myth"><div class="we"><small>Lo que casi todos hacemos</small>Lavar el pollo crudo en el fregadero.</div><div class="she"><small>Lo que hacía Mamá</small><b>El pollo crudo no se lava.</b><p>El agua no le quita las bacterias: las salpica por el fregadero, la mesa y los platos. Solo las mata cocinarlo hasta 165 °F (74 °C).</p><span class="tag">Entrada 35 · pág. 37</span></div></li>
+      <li class="myth"><div class="we"><small>Lo que casi todos hacemos</small>Escurrir el pollo frito sobre papel.</div><div class="she"><small>Lo que hacía Mamá</small><b>Descansa en una rejilla.</b><p>Sobre el papel, el vapor se queda atrapado y ablanda la costra. En la rejilla, el aire pasa por abajo y sigue crujiente.</p><span class="tag">Entrada 10 · pág. 24</span></div></li>
+      <li class="myth"><div class="we"><small>Lo que casi todos hacemos</small>Meter la taza directo en el saco de harina.</div><div class="she"><small>Lo que hacía Mamá</small><b>La harina se mide con cuchara.</b><p>La taza apretada lleva una quinta parte más de harina, y los biscuits y los pasteles salen secos y pesados.</p><span class="tag">Entrada 21 · pág. 29</span></div></li>
+      <li class="myth"><div class="we"><small>Lo que casi todos hacemos</small>Dejar hervir las berzas a borbotones.</div><div class="she"><small>Lo que hacía Mamá</small><b>La olla nunca hierve fuerte.</b><p>El hervor fuerte aprieta la carne, la deja dura y enturbia el caldo. A fuego suave, la carne se ablanda y el caldo queda limpio.</p><span class="tag">Entrada 5 · pág. 21</span></div></li>
+      <li class="myth"><div class="we"><small>Lo que casi todos hacemos</small>Descongelar la carne sobre la mesa de la cocina.</div><div class="she"><small>Lo que hacía Mamá</small><b>Se descongela en la nevera.</b><p>Afuera se calienta mientras el centro sigue congelado, y en esa temperatura las bacterias se multiplican rápido.</p><span class="tag">Entrada 36 · pág. 38</span></div></li>
+      <li class="myth"><div class="we"><small>Lo que casi todos hacemos</small>Dejar la olla de frijoles enfriando en la estufa toda la noche.</div><div class="she"><small>Lo que hacía Mamá</small><b>Las sobras van a la nevera antes de dos horas.</b><p>Una olla grande tarda horas en enfriarse por dentro. En recipientes bajos, el frío llega al centro rápido.</p><span class="tag">Entrada 37 · pág. 38</span></div></li>
+    </ul>
+    <div class="wont">
+      <h3>Lo que este libro <em>no hace.</em></h3>
+      <ul>
+        <li><b>No es un libro de dieta ni de salud.</b><span>Es la cocina del Delta como la hacía Mamá, con manteca, tocino y azúcar. No promete que bajes de peso ni que te cures de nada.</span></li>
+        <li><b>No trae foto de cada plato.</b><span>Trae 14 fotos de cómo se ve “listo” y una foto de cada una de las 16 recetas completas. Lo demás es texto, con letra grande.</span></li>
+        <li><b>No te deja adivinando.</b><span>Cuando importa, como en el pollo, el relleno y los pasteles, te da la temperatura exacta. El termómetro no es vergüenza (Entrada 38).</span></li>
+        <li><b>No está en inglés.</b><span>Es solo en español. Los ingredientes traen su nombre en inglés entre paréntesis, para que los encuentres en la tienda.</span></li>
+      </ul>
+      <p class="last">Si buscas recetas rápidas de microondas, este libro no es para ti. Si quieres cocinar como cocinaba ella, sí.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="las-partes">
+  <div class="wrap">
+    <p class="eyebrow">Las nueve partes</p>
+    <h2>En el orden en que <em>se aprende.</em></h2>
+    <p class="intro">Primero las leyes, después cómo saber que está listo, y después los platos. El índice tiene enlaces: tocas un nombre y el libro te lleva a esa entrada.</p>
+    <ol class="parts">
+      <li><span class="tag">Parte 1</span><h3>Las Leyes de Mamá Hattie</h3><p>las técnicas, y el porqué de cada una</p><span class="rng">Entradas 1–42 · pág. 17</span></li>
+      <li><span class="tag">Parte 2</span><h3>Cómo Saber Que Está Listo</h3><p>por el sonido, la vista, el olor y la mano</p><span class="rng">Entradas 43–74 · pág. 43</span></li>
+      <li><span class="tag">Parte 3</span><h3>La Olla del Dique</h3><p>Big Mama Ozie y la cocina de casi nada</p><span class="rng">Entradas 75–106 · pág. 66</span></li>
+      <li><span class="tag">Parte 4</span><h3>Hierro, Grasa y Despensa</h3><p>el sartén de hierro, la lata de grasa y lo que se guarda</p><span class="rng">Entradas 107–133 · pág. 90</span></li>
+      <li><span class="tag">Parte 5</span><h3>Las Discusiones</h3><p>donde dos buenas cocineras no están de acuerdo, y por qué</p><span class="rng">Entradas 134–149 · pág. 108</span></li>
+      <li><span class="tag">Parte 6</span><h3>La Mesa Dulce</h3><p>pasteles, cobblers, pudines y tea cakes</p><span class="rng">Entradas 150–176 · pág. 120</span></li>
+      <li><span class="tag">Parte 7</span><h3>La Puerta de Atrás</h3><p>los platos de Mamá Hattie, con su nombre por fin</p><span class="rng">Entradas 177–204 · pág. 140</span></li>
+      <li><span class="tag">Parte 8</span><h3>Tarjetas de Cocina</h3><p>para pegar por dentro de la puerta de la alacena</p><span class="rng">24 tarjetas · pág. 158</span></li>
+      <li><span class="tag">Parte 9</span><h3>Las Dieciséis</h3><p>los dieciséis platos que más me piden, completos</p><span class="rng">Entradas 205–220 · pág. 166</span></li>
+    </ol>
+    <div class="extras">
+      <div class="extra">
+        <img src="images/ozella-y-kiara.webp" width="900" height="604" loading="lazy" alt="Mama Ozella y su nieta Kiara en la mesa de la cocina, Kiara escribe en un cuaderno.">
+        <div><span class="tag">Al final del libro · pág. 226</span><h3>Las Páginas de Tu Familia</h3><p>Páginas en blanco con una línea para el nombre de la cocinera de tu familia, para que escribas lo que nadie escribió.</p></div>
+      </div>
+      <div class="extra">
+        <img src="images/tarjetas.webp" width="900" height="1165" loading="lazy" alt="Hoja de las Tarjetas de Cocina: cuatro tarjetas con líneas para recortar, de las Entradas 1, 3, 5 y 6.">
+        <div><span class="tag">De regalo · un segundo PDF</span><h3>Tarjetas de Cocina para imprimir</h3><p>24 tarjetas con lo esencial de las Entradas 1 a 65. Las imprimes en papel normal o cartulina, las recortas y las pegas por dentro de la puerta de la alacena.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="la-cuenta">
+  <div class="wrap">
+    <p class="eyebrow">La cuenta</p>
+    <h2>Lo que cuesta <em>una semana de cenas.</em></h2>
+    <p class="intro">Siete cenas para cuatro personas, sacadas del libro. Cada costo es el que trae la misma entrada, con precios de supermercado de 2026.</p>
+    <div class="cost">
+      <div class="cost-scroll">
+      <table>
+        <thead><tr><th scope="col">Cena</th><th scope="col">Para 4</th></tr></thead>
+        <tbody>
+          <tr><td>Frijoles que alcanzan para muchos, con arroz<small>Entrada 80 · pág. 71</small></td><td>$2.00</td></tr>
+          <tr><td>Cómo estirar un pollo para seis<small>Entrada 106 · pág. 88</small></td><td>$8.00</td></tr>
+          <tr><td>Hoppin’ John para los días flacos<small>Entrada 96 · pág. 82</small></td><td>$2.67</td></tr>
+          <tr><td>Huesos de cuello de cerdo con frijoles<small>Entrada 93 · pág. 80</small></td><td>$3.50</td></tr>
+          <tr><td>Espagueti del Sur con salchicha<small>Entrada 104 · pág. 87</small></td><td>$4.50</td></tr>
+          <tr><td>Cuellos de pavo en la olla<small>Entrada 92 · pág. 79</small></td><td>$8.00</td></tr>
+          <tr><td>Pan de carne del café<small>Entrada 179 · pág. 143</small></td><td>$7.00</td></tr>
+        </tbody>
+        <tfoot><tr><td>La semana</td><td>$35.67</td></tr></tfoot>
+      </table>
+      </div>
+    </div>
+    <div class="cost-gap">
+      <strong>Unos $36 la semana. Como $1.27 por plato.</strong>
+      <span>Ahora piensa en lo que pagas tú por una sola cena para llevar para cuatro. El libro cuesta <em data-c="price">$27</em>, una sola vez.</span>
+    </div>
+    <p class="working">Cómo se hizo la cuenta: cada entrada da el costo de la olla y cuántas porciones rinde. Para 4 personas, se dividió ese costo entre las porciones y se multiplicó por 4 (los cuellos de pavo rinden 4 o 5, así que se cuenta la olla entera). Son precios aproximados de supermercado en EE. UU. en 2026. Es una estimación, no una promesa: tu tienda puede costar más o menos.</p>
+  </div>
+</section>
+
+<section class="host band" id="mama-ozella">
+  <div class="wrap">
+    <div class="host-photos">
+      <figure><img src="images/ozella-estufa.webp" width="900" height="604" loading="lazy" alt="Mama Ozella revuelve una olla en su estufa de leña negra, en su cocina de troncos llena de sartenes de hierro."><figcaption>En mi estufa, en el condado de Bolívar.</figcaption></figure>
+      <figure class="small"><img src="images/mama-hattie-puerta.webp" width="600" height="745" loading="lazy" alt="Foto antigua de Mamá Hattie con su delantal blanco, de pie en la puerta de atrás del café."><figcaption>Mamá Hattie en la puerta de atrás del café, en Cleveland, Misisipi.</figcaption></figure>
+    </div>
+    <div class="letter">
+      <p class="eyebrow">Conoce a Mama Ozella</p>
+      <h2>Pasa, siéntate. <em>Soy Ozella.</em></h2>
+      <p>Nací en 1950 en Mound Bayou, en el condado de Bolívar, Misisipi. Me pusieron el nombre de mi abuela, Big Mama Ozie, que cocinó en el dique de Greenville durante la inundación de 1927.</p>
+      <p>Pero este libro es de mi mamá, Hattie. Ella cocinó quince años en un café de Cleveland y entraba siempre por la puerta de atrás. Su pollo frito, sus berzas y su pastel de camote salían en el menú todos los días. Su nombre no salió nunca.</p>
+      <p>Ella no escribía recetas. Decía que el tazón se sabe la receta. Cuando se fue, todo lo que sabía quedó en mis manos. Mi nieta Kiara puso una cámara junto a la estufa, y entre las dos lo pasamos todo a papel.</p>
+      <p>Nadie lo escribió. Así que lo escribí yo, y le puse su nombre.</p>
+      <p class="sign">— Mama Ozella</p>
+    </div>
+  </div>
+</section>
+
+<section id="resenas">
+  <div class="wrap">
+    <p class="eyebrow">Lo que dicen los lectores</p>
+    <h2>En sus <em>propias palabras.</em></h2>
+    <ul class="reviews" id="reviews-list"></ul>
+  </div>
+</section>
+
+<section class="band" id="lo-que-recibes">
+  <div class="wrap">
+    <div class="offer">
+      <img src="images/portada.webp" width="720" height="1080" loading="lazy" alt="Portada de El Recetario de la Puerta de Atrás, de Mama Ozella.">
+      <div>
+        <p class="eyebrow">Todo lo que recibes</p>
+        <h2>Un libro entero de su cocina, <em>por menos de lo que cuesta una cena fuera para la familia.</em></h2>
+        <ul class="stack">
+          <li><div><b>El Recetario de la Puerta de Atrás</b><span>220 entradas en nueve partes, 237 páginas, en un PDF en español con letra grande</span></div></li>
+          <li><div><b>14 fotos de cómo se ve “listo”</b><span>Para que lo veas con tus ojos, no con el reloj</span></div></li>
+          <li><div><b>Las Dieciséis, completas</b><span>Los 16 platos que más me piden, cada uno con su foto</span></div></li>
+          <li><div><b>Las Páginas de Tu Familia</b><span>Para escribir las recetas de los tuyos, con el nombre de quien las cocinaba</span></div></li>
+          <li><div><b>De regalo: Tarjetas de Cocina</b><span>Un segundo PDF con 24 tarjetas para imprimir y pegar en la alacena</span></div></li>
+        </ul>
+        <div class="price-row">
+          <span class="price" data-c="price">$27</span>
+          <s class="was js-was" data-c="regularPrice">$55</s>
+          <span class="price-note js-launch">Precio de lanzamiento<span class="js-until"></span></span>
+        </div>
+        <div class="units">
+          <div><strong data-c="perEntry">12¢</strong><span>por entrada</span></div>
+          <div><strong data-c="perPage">11¢</strong><span>por página</span></div>
+          <div><strong data-c="perRecipe">$1.69</strong><span>por receta completa</span></div>
+        </div>
+        <div class="cta-block">
+          <a class="btn js-buy" href="#comprar">Quiero el libro&nbsp;·&nbsp;<span data-c="price">$27</span></a>
+          <p class="trust">Un solo pago · descarga inmediata · garantía de <span data-c="refundDays">30</span> días</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona">
+  <div class="wrap">
+    <p class="eyebrow">Cómo funciona</p>
+    <h2>Pagas una vez. <em>Lo abres en un minuto.</em></h2>
+    <ol class="steps">
+      <li><h3>Pagas</h3><p>Con tu tarjeta, en una página de pago segura. Nosotros nunca vemos el número, y no tienes que crear ninguna cuenta.</p></li>
+      <li><h3>Se abre en un minuto</h3><p>El libro aparece en la pantalla siguiente. Ábrelo en el teléfono, la tableta, la computadora o el televisor, si tiene navegador.</p></li>
+      <li><h3>Queda en tu correo</h3><p>Te llega el mismo enlace a tu correo, para abrirlo otra vez cualquier día que cocines. No se envía nada por correo postal.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="garantia">
+  <div class="wrap">
+    <div class="guarantee">
+      <div class="seal" aria-hidden="true"><div><b data-c="refundDays">30</b>días</div></div>
+      <div>
+        <h2><span data-c="refundDays">30</span> días para decidir.</h2>
+        <p>Léelo y cocina con él. Si en <span data-c="refundDays">30</span> días no es lo que esta página dice, contesta el correo del recibo y te devuelvo todo tu dinero. Sin formularios y sin preguntas.</p>
+        <p>No le voy a pedir a nadie que vive de su pensión que me demuestre que borró un archivo.</p>
+        <p class="sig">— Mama Ozella</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas">
+  <div class="wrap narrow">
+    <p class="eyebrow">Preguntas frecuentes</p>
+    <h2>Lo que la gente <em>pregunta primero.</em></h2>
+    <div class="faq">
+      <details><summary>¿Es un libro impreso o una descarga?</summary><p>Es una descarga: un archivo PDF en español, de 237 páginas, tamaño carta. No se envía nada por correo postal. Si quieres tenerlo en papel, puedes imprimir las páginas que necesites en papel normal.</p></details>
+      <details><summary>¿Qué trae exactamente?</summary><p>220 entradas en nueve partes, 14 fotos de cómo se ve “listo”, las 16 recetas completas con su foto, un glosario, un índice de platos y Las Páginas de Tu Familia. De regalo, un segundo PDF con las 24 Tarjetas de Cocina para imprimir.</p></details>
+      <details><summary>¿Qué medidas usa?</summary><p>Tazas y cucharadas, con su equivalente en gramos y mililitros. Las temperaturas vienen en °F y en °C. Al principio del libro hay una tabla de equivalencias.</p></details>
+      <details><summary>¿De dónde salen las recetas? ¿Están probadas?</summary><p>Son la cocina del Delta de Misisipi que Mama Ozella enseña en el canal. Cada técnica y cada receta se revisó según cómo se comporta el plato en la estufa, y cada entrada te dice cómo saber que quedó bien.</p></details>
+      <details><summary>No me llevo bien con la computadora. ¿Podré abrirlo?</summary><p>Sí. Después de pagar, el libro se abre en la pantalla siguiente. Si puedes abrir una foto que te mandan por correo, puedes abrir este libro. Si te atoras, escríbenos a <span data-c="supportEmail">mamaozella071@gmail.com</span> y una persona te ayuda.</p></details>
+      <details><summary>¿Y si pierdo el archivo?</summary><p>El enlace se queda en tu correo. Búscalo con las palabras “Puerta de Atrás” y descárgalo otra vez. Si no lo encuentras, escríbenos y te lo mandamos de nuevo.</p></details>
+      <details><summary>¿Es una suscripción?</summary><p>No. Pagas una sola vez y el libro es tuyo. No hay cobros cada mes.</p></details>
+      <details><summary>¿Y si no es para mí?</summary><p>Tienes <span data-c="refundDays">30</span> días. Contesta el correo del recibo y te devolvemos tu dinero, sin preguntas.</p></details>
+      <details><summary>¿Está en inglés también?</summary><p>No. El libro está solo en español. Muchos ingredientes traen también su nombre en inglés entre paréntesis, como “all-purpose flour”, para que los encuentres fácil en la tienda.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final" id="comprar">
+  <div class="wrap">
+    <p class="eyebrow">El Recetario de la Puerta de Atrás</p>
+    <h2>Ponle su nombre <em>mientras alguien todavía se acuerda.</em></h2>
+    <p class="lede">220 entradas, el porqué de cada una y cómo saber que quedó bien. Un PDF, en tu correo en un minuto.</p>
+    <div class="price-row">
+      <span class="price" data-c="price">$27</span>
+      <s class="was js-was" data-c="regularPrice">$55</s>
+      <span class="price-note js-launch">Precio de lanzamiento<span class="js-until"></span></span>
+    </div>
+    <div class="cta-block">
+      <a class="btn btn-gold js-buy" href="#comprar">Quiero el libro&nbsp;·&nbsp;<span data-c="price">$27</span></a>
+      <p class="trust">Un solo pago · descarga inmediata · garantía de <span data-c="refundDays">30</span> días</p>
+    </div>
+    <p class="goodbye">“Cocínalo como si alguien viniera de regreso a casa. Yo dejo prendida la luz de la cocina.”<span>— Mama Ozella</span></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>El Recetario de la Puerta de Atrás</b> · Mama Ozella</div>
+    <p class="support">¿Dudas? Escríbenos a <strong data-c="supportEmail">mamaozella071@gmail.com</strong> <button type="button" class="copy-email" id="copy-email">Copiar</button><br>Una persona de verdad te contesta.</p>
+    <nav class="legal" aria-label="Enlaces">
+      <a href="terminos.html">Términos</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="reembolsos.html">Reembolsos</a>
+      <a class="js-yt" href="https://www.youtube.com/@MamaOzellla" target="_blank" rel="noopener">El canal en YouTube</a>
+    </nav>
+    <p class="disclosure">Mama Ozella es la anfitriona de nuestro canal, creada con inteligencia artificial, y su historia familiar es un personaje. Las imágenes de esta página son ilustraciones generadas. Las recetas se revisaron según cómo se comporta cada plato en la estufa. El libro es una referencia de cocina, no un consejo médico ni de dieta; cocina a temperaturas seguras y ten en cuenta tus alergias.</p>
+    <p>© 2026 Mama Ozella</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <div class="in">
+    <div class="p"><strong data-c="price">$27</strong><s class="js-was" data-c="regularPrice">$55</s><span class="js-launch">Precio de lanzamiento</span></div>
+    <a class="btn btn-sm js-buy" href="#comprar" tabindex="-1">Quiero el libro&nbsp;·&nbsp;<span data-c="price">$27</span></a>
+  </div>
+</div>
+
+<dialog class="lb" id="lb" aria-label="Imagen ampliada">
+  <button type="button" class="lb-close" id="lb-close" aria-label="Cerrar">✕</button>
+  <img id="lb-img" src="data:," alt="">
+  <p id="lb-cap"></p>
+</dialog>
+
+<dialog class="exit" id="exit" aria-labelledby="exit-title">
+  <button type="button" class="exit-close" id="exit-close" aria-label="Cerrar">✕</button>
+  <div class="exit-in">
+    <img src="images/portada.webp" width="720" height="1080" alt="Portada de El Recetario de la Puerta de Atrás." loading="lazy">
+    <p class="eyebrow" style="margin:0">Antes de irte</p>
+    <h2 id="exit-title">El domingo va a llegar igual.</h2>
+    <p>Y la próxima vez que alguien te pida las berzas de la abuela, vas a tener la página. 220 entradas, cada una con su porqué, a <b data-c="perEntry">12¢</b> cada una.</p>
+    <div class="price-row">
+      <span class="price" data-c="price">$27</span>
+      <s class="was js-was" data-c="regularPrice">$55</s>
+    </div>
+    <p class="price-note js-launch" style="margin:0">Precio de lanzamiento<span class="js-until"></span></p>
+    <a class="btn js-buy" href="#comprar">Quiero el libro&nbsp;·&nbsp;<span data-c="price">$27</span></a>
+    <p class="trust">Garantía de <span data-c="refundDays">30</span> días · un solo pago</p>
+    <button type="button" class="no-thanks" id="exit-no">No, gracias</button>
+  </div>
+</dialog>
+
+<div class="cookie" id="cookie" hidden>
+  <span>Usamos cookies para saber cómo llegan las personas a esta página.</span>
+  <button type="button" id="cookie-ok">Entendido</button>
+</div>
+
+<script>
+/* ================= AJUSTES — cambia solo esto ================= */
+const CONFIG = {
+  checkoutUrl: "https://oldbookscollection.gumroad.com/l/nmmwcs",   // enlace de pago. Vacío = los botones bajan a "Comprar"
+  price: "$27",                    // precio que se cobra hoy
+  regularPrice: "$55",             // precio normal después del lanzamiento
+  launchPrice: "$27",
+  launchEndDate: "",               // "2026-11-30" — último día del precio de lanzamiento
+  refundDays: 30,
+  emailFormAction: "",             // (sin usar por ahora: la ventana de muestra gratis está apagada)
+  supportEmail: "mamaozella071@gmail.com",
+  youtubeUrl: "https://www.youtube.com/@MamaOzellla",
+  entries: 220, pages: 237, fullRecipes: 16,
+  exitPopup: true,                 // ventana "Antes de irte": una vez cada 7 días por visitante
+  metaPixelId: "",                 // p. ej. "123456789012345"
+  ga4Id: "",                       // p. ej. "G-XXXXXXXXXX"
+  /* Reseñas: reemplaza los textos y pon placeholder:false. Solo reseñas reales, copiadas tal como se escribieron. */
+  reviews: [
+    { text: "Aquí va la reseña de un lector, copiada tal como la escribió.", name: "Nombre del lector", place: "Ciudad, Estado", placeholder: true },
+    { text: "Aquí va la segunda reseña de un lector, copiada tal como la escribió.", name: "Nombre del lector", place: "Ciudad, Estado", placeholder: true },
+    { text: "Aquí va la tercera reseña de un lector, copiada tal como la escribió.", name: "Nombre del lector", place: "Ciudad, Estado", placeholder: true }
+  ]
+};
+/* ============================================================== */
+
+/* Datos del selector "Elige lo tuyo": número de entrada, título y página, tal como vienen en el índice del libro. */
+const PICKER = [
+  { name: "Pollo frito", items: [[4,"Sala el pollo antes de empanizarlo",21],[9,"La carne empanizada descansa antes de freír",23],[10,"El pollo frito descansa en rejilla, no en papel",24],[11,"No llenes el sartén",24],[43,"Cuándo está lista la grasa para freír",44],[44,"Cuándo está listo el pollo frito",45],[131,"Cómo recalentar el pollo frito para que cruja",106],[140,"Pollo frito con huevo o solo con suero",113],[141,"Con tapa o sin tapa al freír el pollo",113],[200,"Pollo frito para la iglesia, por turnos",155],[205,"Pollo frito del Sur",168,1]] },
+  { name: "Pan de maíz", items: [[13,"El hierro se calienta despacio",25],[14,"El sartén caliente antes del pan de maíz",26],[49,"Cuándo está listo el pan de maíz",49],[82,"Cush: el pan de maíz que vuelve al sartén",73],[87,"Hoecake: pan de maíz en la plancha",76],[88,"Pan de maíz de agua caliente",77],[136,"Azúcar en el pan de maíz, o no",110],[138,"Harina de maíz blanca o amarilla",112],[208,"Pan de maíz en sartén de hierro",177,1]] },
+  { name: "Biscuits", items: [[1,"La grasa fría hace la capa",19],[2,"Manos frías, masa fría",19],[12,"Cuándo sí se amontona: los panecillos se apoyan",25],[21,"Mide la harina con cuchara, no con la taza",29],[22,"No amases los biscuits",30],[23,"Dobla la masa, no la estires",30],[24,"Corta derecho, no gires el molde",31],[25,"El suero de leche despierta el bicarbonato",32],[26,"El polvo de hornear tiene fecha",32],[46,"La masa fea es la masa buena",46],[48,"Cuándo están dorados los biscuits por abajo",48],[139,"Biscuits con manteca o con mantequilla",112]] },
+  { name: "Berzas", items: [[5,"La olla nunca hierve fuerte",21],[6,"Primero el caldo, después las verduras",22],[31,"La carne ahumada da la base",35],[53,"Cuándo está listo el caldo",51],[54,"Cuándo están listas las berzas",52],[133,"El caldo de las verduras no se tira",107],[135,"Cerdo o pavo en las berzas",110],[201,"Berzas para 40 en dos ollas",155],[206,"Berzas con su caldo",171,1]] },
+  { name: "Salsa (gravy)", items: [[17,"Lo pegado al fondo es oro",27],[18,"El roux se mueve sin parar",28],[19,"Harina y grasa en partes iguales",28],[20,"El líquido entra al roux poco a poco",29],[50,"El color del roux para la salsa",49],[51,"Cuándo espesó la salsa",50],[78,"Salsa de cebolla sin carne",70],[79,"Salsa blanca de grasa y harina",70],[134,"La salsa encima o la salsa para mojar",109],[207,"Chuletas de cerdo en salsa de cebolla",174,1]] },
+  { name: "Frijoles", items: [[55,"Cuándo están tiernos los frijoles",53],[80,"Frijoles que alcanzan para muchos",71],[81,"Frijoles pintos con pan de maíz",72],[93,"Huesos de cuello de cerdo con frijoles",80],[96,"Hoppin' John para los días flacos",82],[120,"Cuánto duran los frijoles secos",99],[147,"Frijoles remojados o sin remojar",117],[217,"Frijoles de ojo negro con papada",204,1]] },
+  { name: "Pastel de camote", items: [[58,"El almíbar de los camotes",55],[59,"Cuándo sacar un pastel de natilla",56],[61,"Cuándo está dorada la masa del pastel",57],[143,"Pastel de camote o de calabaza",115],[150,"Masa de pastel con manteca",121],[151,"Hornear la masa en blanco",122],[176,"Cómo llevar los pasteles a la iglesia",138],[211,"Pastel de camote",186,1]] },
+  { name: "Relleno", items: [[69,"Cuándo está listo el relleno de pan de maíz",62],[126,"Pan de maíz de ayer: la base del relleno",103],[137,"El relleno dentro del pavo o en molde",111],[219,"Relleno de pan de maíz",210,1]] },
+  { name: "Macarrones con queso", items: [[70,"Cuándo están listos los macarrones con queso",63],[142,"Macarrones firmes o cremosos",114],[202,"Macarrones para 50 en bandejas",156],[210,"Macarrones con queso al horno",183,1]] },
+  { name: "Pound cake y cobbler", items: [[60,"Cuándo está listo el pound cake",57],[62,"Cuándo está listo el cobbler",58],[148,"Cobbler con masa arriba o masa abajo",118],[149,"Pound cake en horno frío o caliente",118],[160,"Durazno de lata o fresco: cómo cambiar la receta",128],[170,"El pound cake quemado de Lucius",134],[212,"Cobbler de durazno",189,1],[214,"Pound cake de antes",195,1]] },
+  { name: "Sartén de hierro", items: [[13,"El hierro se calienta despacio",25],[107,"Cómo curar un sartén de hierro nuevo",91],[108,"Cómo rescatar un sartén oxidado",92],[109,"Cómo lavar el hierro sin quitarle la cura",93],[110,"Seca el hierro en la estufa",93],[111,"Lo que no se deja mucho rato en el hierro",94],[112,"El hierro viejo no se jubila",94],[113,"La lata de grasa: colar y guardar",95]] },
+  { name: "Comida para la iglesia", items: [[176,"Cómo llevar los pasteles a la iglesia",138],[198,"Cocinar para 30 a 60: la regla para multiplicar",154],[199,"Cuánto comprar para 50 personas",154],[200,"Pollo frito para la iglesia, por turnos",155],[201,"Berzas para 40 en dos ollas",155],[202,"Macarrones para 50 en bandejas",156],[203,"Comida para un velorio: cómo llevarla y mantenerla segura",156],[204,"La mesa del regreso a casa",157]] }
+];
+
+(function(){
+  const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+
+  // 1. Launch price: show the dated bar while it runs; switch to the regular price after the date.
+  let launchActive = true, endText = "";
+  if (CONFIG.launchEndDate) {
+    const end = new Date(CONFIG.launchEndDate + "T23:59:59");
+    if (!isNaN(end)) {
+      endText = end.toLocaleDateString("es-US", { day:"numeric", month:"long", year:"numeric" });
+      if (new Date() > end) launchActive = false;
+    }
+  }
+  const vals = { ...CONFIG, launchEndText: endText };
+  if (!launchActive) vals.price = CONFIG.regularPrice;
+  const amount = parseFloat(String(vals.price).replace(/[^0-9.]/g, ""));
+  if (amount > 0) {
+    vals.perEntry = Math.round(amount / CONFIG.entries * 100) + "¢";
+    vals.perPage = Math.round(amount / CONFIG.pages * 100) + "¢";
+    vals.perRecipe = "$" + (amount / CONFIG.fullRecipes).toFixed(2);
+  }
+  $$("[data-c]").forEach(el => { const v = vals[el.dataset.c]; if (v !== undefined && v !== "") el.textContent = v; });
+  if (launchActive && endText) {
+    document.getElementById("announce").hidden = false;
+    $$(".js-until").forEach(el => el.textContent = " · hasta el " + endText);
+  }
+  if (!launchActive) $$(".js-was, .js-launch").forEach(el => el.hidden = true);
+
+  // 2. Buy buttons → checkout, carrying any utm_ parameters from this page's address.
+  if (CONFIG.checkoutUrl) {
+    let url;
+    try {
+      url = new URL(CONFIG.checkoutUrl);
+      new URLSearchParams(location.search).forEach((v, k) => { if (k.startsWith("utm_")) url.searchParams.set(k, v); });
+    } catch (e) { url = CONFIG.checkoutUrl; }
+    $$(".js-buy").forEach(a => { a.href = String(url); a.removeAttribute("target"); });
+  }
+  $$(".js-yt").forEach(a => a.href = CONFIG.youtubeUrl);
+
+  // 3. Reviews from CONFIG.
+  const list = document.getElementById("reviews-list");
+  CONFIG.reviews.forEach(r => {
+    const li = document.createElement("li");
+    if (r.placeholder) { li.className = "placeholder"; const t = document.createElement("span"); t.className = "ph"; t.textContent = "Ejemplo · reemplazar"; li.appendChild(t); }
+    const q = document.createElement("blockquote"); q.textContent = "“" + r.text + "”";
+    const c = document.createElement("cite"); c.textContent = r.name + (r.place ? " · " + r.place : "");
+    li.append(q, c); list.appendChild(li);
+  });
+
+
+  // 3b. "Elige lo tuyo" picker.
+  const chipsBox = document.getElementById("chips"), picks = document.getElementById("picks"), sum = document.getElementById("pick-sum");
+  const chosen = new Set([0]);
+  const renderPicks = () => {
+    picks.textContent = "";
+    const seen = new Set();
+    [...chosen].sort((a, b) => a - b).forEach(i => {
+      const g = PICKER[i];
+      const card = document.createElement("div"); card.className = "pick";
+      const h = document.createElement("h3"); h.textContent = g.name + " ";
+      const c = document.createElement("span"); c.textContent = g.items.length + " entradas"; h.appendChild(c);
+      const ol = document.createElement("ol");
+      g.items.forEach(([n, t, p, full]) => {
+        seen.add(n);
+        const li = document.createElement("li");
+        li.innerHTML = '<span class="n"></span><span class="t"></span><span class="p"></span>';
+        li.children[0].textContent = n; li.children[1].textContent = t; li.children[2].textContent = "pág. " + p;
+        if (full) { const b = document.createElement("span"); b.className = "full"; b.textContent = "Receta completa con foto"; li.appendChild(b); }
+        ol.appendChild(li);
+      });
+      card.append(h, ol); picks.appendChild(card);
+    });
+    sum.innerHTML = chosen.size
+      ? 'Elegiste ' + chosen.size + (chosen.size === 1 ? ' tema' : ' temas') + ': <em>' + seen.size + ' entradas</em> en el libro.'
+      : 'Toca un plato para ver sus entradas.';
+  };
+  PICKER.forEach((g, i) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.textContent = g.name;
+    b.setAttribute("aria-pressed", chosen.has(i) ? "true" : "false");
+    b.addEventListener("click", () => {
+      chosen.has(i) ? chosen.delete(i) : chosen.add(i);
+      b.setAttribute("aria-pressed", chosen.has(i) ? "true" : "false");
+      renderPicks();
+    });
+    chipsBox.appendChild(b);
+  });
+  renderPicks();
+
+  // 4. Sticky bar: after the hero button scrolls away, hidden while the final offer is on screen.
+  const sticky = document.getElementById("sticky");
+  const heroBtn = document.getElementById("hero-buy");
+  const final = document.getElementById("comprar");
+  let pastHero = false, atFinal = false;
+  const paint = () => {
+    const on = pastHero && !atFinal;
+    sticky.classList.toggle("show", on);
+    sticky.setAttribute("aria-hidden", on ? "false" : "true");
+    sticky.querySelector("a").tabIndex = on ? 0 : -1;
+  };
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting && e.boundingClientRect.top < 0; paint(); }).observe(heroBtn);
+    new IntersectionObserver(([e]) => { atFinal = e.isIntersecting; paint(); }, { threshold: 0.15 }).observe(final);
+  }
+
+
+  // 4b. Dish rows: load the small photos when the section comes near; pause the motion while off screen.
+  const mq = document.getElementById("mq");
+  if (mq) {
+    const load = () => mq.querySelectorAll("img[data-src]").forEach(i => { i.src = i.dataset.src; i.removeAttribute("data-src"); });
+    if ("IntersectionObserver" in window) {
+      let loaded = false;
+      new IntersectionObserver(([e]) => {
+        if (e.isIntersecting && !loaded) { loaded = true; load(); }
+        mq.classList.toggle("off", !e.isIntersecting);
+      }, { rootMargin: "600px 0px" }).observe(mq);
+    } else load();
+  }
+
+  // 5. Lightbox for dishes and page previews.
+  const lb = document.getElementById("lb"), lbImg = document.getElementById("lb-img"), lbCap = document.getElementById("lb-cap");
+  let opener = null;
+  $$("[data-full]").forEach(b => b.addEventListener("click", () => {
+    opener = b;
+    lbImg.src = b.dataset.full; lbImg.alt = b.querySelector("img").alt; lbCap.textContent = b.dataset.cap || "";
+    if (lb.showModal) lb.showModal(); else lb.setAttribute("open", "");
+    document.getElementById("lb-close").focus();
+  }));
+  const closeLb = () => { lb.close ? lb.close() : lb.removeAttribute("open"); };
+  document.getElementById("lb-close").addEventListener("click", closeLb);
+  lb.addEventListener("click", e => { if (e.target === lb) closeLb(); });
+  lb.addEventListener("close", () => { if (opener) opener.focus(); });
+
+  // 6. Copy support email.
+  const cp = document.getElementById("copy-email");
+  cp.addEventListener("click", () => {
+    const done = () => { cp.textContent = "Copiado"; setTimeout(() => cp.textContent = "Copiar", 2000); };
+    if (navigator.clipboard) navigator.clipboard.writeText(CONFIG.supportEmail).then(done, () => {});
+  });
+
+
+  // 8. "Antes de irte" popup — once per visitor every 7 days, never after a buy click, never in the first 10 seconds.
+  const exitBox = document.getElementById("exit");
+  const KEY = "ozella-exit";
+  const store = { get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }, set(k,v){ try { localStorage.setItem(k,v); } catch(e){} } };
+  let clickedBuy = false, shown = false;
+  const loadedAt = Date.now();
+  $$(".js-buy").forEach(a => a.addEventListener("click", () => { clickedBuy = true; store.set(KEY, String(Date.now())); if (exitBox.open) exitBox.close(); }));
+  const recentlyShown = () => { const t = parseInt(store.get(KEY) || "0", 10); return t && Date.now() - t < 7 * 864e5; };
+  const showExit = () => {
+    if (!CONFIG.exitPopup || shown || clickedBuy || recentlyShown() || Date.now() - loadedAt < 10000) return;
+    if (document.querySelector("dialog[open]")) return;
+    shown = true; store.set(KEY, String(Date.now()));
+    if (exitBox.showModal) exitBox.showModal(); else exitBox.setAttribute("open", "");
+    document.getElementById("exit-close").focus();
+  };
+  const closeExit = () => { exitBox.close ? exitBox.close() : exitBox.removeAttribute("open"); };
+  document.getElementById("exit-close").addEventListener("click", closeExit);
+  document.getElementById("exit-no").addEventListener("click", closeExit);
+  exitBox.addEventListener("click", e => { if (e.target === exitBox) closeExit(); });
+  let lastFocus = null;
+  exitBox.addEventListener("close", () => { if (lastFocus) lastFocus.focus(); });
+  document.addEventListener("focusin", e => { if (!exitBox.contains(e.target)) lastFocus = e.target; });
+  const touch = window.matchMedia && matchMedia("(hover: none), (pointer: coarse)").matches;
+  if (touch) {
+    setTimeout(showExit, 45000);
+    const onScroll = () => {
+      const depth = (scrollY + innerHeight) / document.documentElement.scrollHeight;
+      if (depth >= 0.6 && Date.now() - loadedAt >= 10000) { showExit(); removeEventListener("scroll", onScroll); }
+    };
+    addEventListener("scroll", onScroll, { passive: true });
+  } else {
+    document.addEventListener("mouseout", e => { if (!e.relatedTarget && e.clientY <= 0) showExit(); });
+  }
+
+  // 7. Analytics: loads only when an ID is set, with a cookie notice.
+  if (CONFIG.metaPixelId || CONFIG.ga4Id) {
+    let seen = false; try { seen = localStorage.getItem("ozella-cookies") === "1"; } catch (e) {}
+    const box = document.getElementById("cookie");
+    if (!seen) box.hidden = false;
+    document.getElementById("cookie-ok").addEventListener("click", () => { box.hidden = true; try { localStorage.setItem("ozella-cookies", "1"); } catch (e) {} });
+    if (CONFIG.ga4Id) {
+      const s = document.createElement("script"); s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + CONFIG.ga4Id; document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || []; window.gtag = function(){ dataLayer.push(arguments); }; gtag("js", new Date()); gtag("config", CONFIG.ga4Id);
+    }
+    if (CONFIG.metaPixelId) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      fbq("init", CONFIG.metaPixelId); fbq("track", "PageView");
+      $$(".js-buy").forEach(a => a.addEventListener("click", () => fbq("track", "InitiateCheckout")));
+    }
+  }
+})();
+</script>
+</body>
+</html>
